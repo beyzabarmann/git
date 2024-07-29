@@ -1,0 +1,89 @@
+
+beyza@LAPTOP-PARA4JUR MINGW64 ~
+$ git config --global user.name "Beyza Barman"
+
+beyza@LAPTOP-PARA4JUR MINGW64 ~
+$ git config user.name
+Beyza Barman
+
+beyza@LAPTOP-PARA4JUR MINGW64 ~
+$ git config --global user.email "beyzabarmann@hotmail.com"
+
+beyza@LAPTOP-PARA4JUR MINGW64 ~
+$ git config user.email
+beyzabarmann@hotmail.com
+
+beyza@LAPTOP-PARA4JUR MINGW64 ~
+$ mkdir gitDeneme
+
+beyza@LAPTOP-PARA4JUR MINGW64 ~
+$ cd gitDeneme
+
+beyza@LAPTOP-PARA4JUR MINGW64 ~/gitDeneme
+$ git init
+Initialized empty Git repository in C:/Users/beyza/gitDeneme/.git/
+
+
+beyza@LAPTOP-PARA4JUR MINGW64 ~/gitDeneme (master)
+$ git branch -m main
+
+beyza@LAPTOP-PARA4JUR MINGW64 ~/gitDeneme (main)
+$ git branch r2.5.4
+
+
+
+beyza@LAPTOP-PARA4JUR MINGW64 ~/gitDeneme (r2.5.4)
+$ git branch -a
+  main
+* r2.5.4
+
+beyza@LAPTOP-PARA4JUR MINGW64 ~/gitDeneme (r2.5.4)
+$ git branch r2.5.5
+
+beyza@LAPTOP-PARA4JUR MINGW64 ~/gitDeneme (r2.5.4)
+$ git branch -a
+  main
+* r2.5.4
+  r2.5.5
+
+beyza@LAPTOP-PARA4JUR MINGW64 ~/gitDeneme (r2.5.4)
+$ git branch r3.0
+
+beyza@LAPTOP-PARA4JUR MINGW64 ~/gitDeneme (r2.5.4)
+$ git branch -a
+  main
+* r2.5.4
+  r2.5.5
+  r3.0
+
+beyza@LAPTOP-PARA4JUR MINGW64 ~/gitDeneme (r2.5.4)
+$ git checkout -b r2.5.4.1-bugfix
+Switched to a new branch 'r2.5.4.1-bugfix'
+
+beyza@LAPTOP-PARA4JUR MINGW64 ~/gitDeneme (r2.5.4.1-bugfix)
+$ git add .
+
+beyza@LAPTOP-PARA4JUR MINGW64 ~/gitDeneme (r2.5.4.1-bugfix)
+$ git commit -m "Fix the bug in r2.5.4"
+On branch r2.5.4.1-bugfix
+nothing to commit, working tree clean
+
+beyza@LAPTOP-PARA4JUR MINGW64 ~/gitDeneme (r2.5.4.1-bugfix)
+$ git checkout r2.5.5
+Switched to branch 'r2.5.5'
+
+beyza@LAPTOP-PARA4JUR MINGW64 ~/gitDeneme (r2.5.5)
+$ git merge r2.5.4.1-bugfix
+Already up to date.
+
+beyza@LAPTOP-PARA4JUR MINGW64 ~/gitDeneme (r2.5.5)
+$ git checkout r3.0
+Switched to branch 'r3.0'
+
+beyza@LAPTOP-PARA4JUR MINGW64 ~/gitDeneme (r3.0)
+$ git merge r2.5.4.1-bugfix
+Already up to date.
+
+beyza@LAPTOP-PARA4JUR MINGW64 ~/gitDeneme (r3.0)
+$ git branch -d r2.5.4.1
+error: branch 'r2.5.4.1' not found
